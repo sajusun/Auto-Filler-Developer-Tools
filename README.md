@@ -60,7 +60,7 @@ You can install DevFill into any Chromium-based browser (**Google Chrome, Micros
 
 1. Clone or download this repository:
    ```bash
-   git clone https://github.com/your-username/devfill.git
+   git clone https://github.com/sajusun/Auto-Filler-Developer-Tools.git
    cd devfill
    ```
 
@@ -170,4 +170,4 @@ pnpm run build
 
 ## 📄 License
 This project is open-source and available under the [MIT License](LICENSE).
-Built with ❤️ by [Sakhawat](https://github.com).
+Built with ❤️ by [Sakhawat](https://github.com/sajusun).
