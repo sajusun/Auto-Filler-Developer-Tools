@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevFill</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <div class="logo-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+        </div>
+        <div>
+          <h1 class="title">DevFill</h1>
+          <span class="subtitle">Smart Dummy Filler</span>
+        </div>
+      </div>
+      <button id="btn-options" class="icon-button" title="Settings & Custom Rules">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+      </button>
+    </header>
+
+    <!-- Main Actions -->
+    <div class="actions">
+      <button id="btn-fill-all" class="btn-primary">
+        <span class="btn-icon">⚡</span>
+        <div class="btn-text-group">
+          <span class="btn-title">Fill Form</span>
+          <span class="btn-shortcut">Alt + Shift + F</span>
+        </div>
+      </button>
+
+      <button id="btn-clear-all" class="btn-secondary">
+        <span class="btn-icon">🧹</span>
+        <div class="btn-text-group">
+          <span class="btn-title">Clear Form</span>
+          <span class="btn-shortcut">Alt + Shift + C</span>
+        </div>
+      </button>
+    </div>
+
+    <!-- Live Status / Result Feedback -->
+    <div id="status-card" class="status-card">
+      <span class="status-indicator"></span>
+      <span id="status-text" class="status-text">Ready to fill active page</span>
+    </div>
+
+    <!-- Quick Settings Section -->
+    <div class="settings-section">
+      <div class="section-label">Quick Configuration</div>
+
+      <!-- Locale Selector -->
+      <div class="setting-row">
+        <span class="setting-title">Data Preset</span>
+        <div class="pill-group">
+          <button id="preset-global" class="pill-btn active" data-locale="global">Global / US</button>
+          <button id="preset-bd" class="pill-btn" data-locale="bangladesh">🇧🇩 BD</button>
+        </div>
+      </div>
+
+      <!-- Password Mode -->
+      <div class="setting-row">
+        <div class="setting-info">
+          <span class="setting-title">Fixed Password</span>
+          <span class="setting-hint" id="password-hint">Password123!</span>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" id="toggle-fixed-password" checked>
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span class="badge">Open Source • Free</span>
+      <a href="https://github.com" target="_blank" class="github-link" title="View Source on GitHub">
+        GitHub
+      </a>
+    </footer>
+  </div>
+
+  <script type="module" src="popup.ts"></script>
+</body>
+</html>

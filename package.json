@@ -1,0 +1,29 @@
+{
+  "name": "devfill",
+  "version": "1.0.0",
+  "description": "Smart, lightning-fast dummy data form filler for modern web developers & QA engineers",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/build.js --watch",
+    "build": "tsc --noEmit && node scripts/build.js",
+    "generate-icons": "node scripts/generate-icons.js",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "chrome-extension",
+    "form-filler",
+    "dummy-data",
+    "developer-tools",
+    "react-forms",
+    "vue-forms",
+    "testing"
+  ],
+  "author": "Sakhawat",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.0.280",
+    "@types/node": "^26.6.5",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
+  }
+}

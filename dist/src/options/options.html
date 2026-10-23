@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevFill Settings & Preferences</title>
+  <script type="module" crossorigin src="../../assets/options-GWDtmaHl.js"></script>
+  <link rel="modulepreload" crossorigin href="../../assets/index-DKVw2Y2j.js">
+  <link rel="stylesheet" crossorigin href="../../assets/options-D-TPA4uj.css">
+</head>
+<body>
+  <div class="options-layout">
+    <!-- Sidebar / Brand -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+        </div>
+        <div>
+          <h2>DevFill</h2>
+          <span class="version">v1.0.0 • Manifest V3</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#general" class="nav-item active">General Settings</a>
+        <a href="#data-presets" class="nav-item">Data Presets</a>
+        <a href="#shortcuts" class="nav-item">Hotkeys & Cheatsheet</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p>100% Offline & Open Source</p>
+        <a href="https://github.com" target="_blank">Star on GitHub ⭐</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <header class="content-header">
+        <div>
+          <h1>Extension Configuration</h1>
+          <p class="subtitle">Customize dummy data rules, default passwords, and framework behavior.</p>
+        </div>
+        <button id="btn-save" class="btn-primary">
+          <span>Save Changes</span>
+        </button>
+      </header>
+
+      <!-- Section: General -->
+      <section id="general" class="card">
+        <h3>General Preferences</h3>
+        
+        <div class="form-group">
+          <label for="select-locale">Default Locale / Data Preset</label>
+          <select id="select-locale" class="form-control">
+            <option value="global">Global / International (US/UK Names, Phones & Addresses)</option>
+            <option value="bangladesh">🇧🇩 Bangladesh (Bangladeshi Names, +880 Phones, Dhaka/Ctg Addresses)</option>
+          </select>
+          <span class="help-text">Controls default phone formats, addresses, and localized names.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="input-email-domain">Default Test Email Domain</label>
+          <div class="input-prefix-wrapper">
+            <span class="prefix">@</span>
+            <input type="text" id="input-email-domain" class="form-control with-prefix" placeholder="example.com">
+          </div>
+          <span class="help-text">Generated emails will end with this domain (e.g. john.doe12@example.com).</span>
+        </div>
+      </section>
+
+      <!-- Section: Password Rules -->
+      <section class="card">
+        <h3>Password & Security Testing</h3>
+
+        <div class="toggle-group">
+          <div>
+            <span class="toggle-label">Use Fixed Test Password</span>
+            <span class="help-text">Always fills the same password so you can easily log in to registered test accounts.</span>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggle-fixed-password">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="form-group" id="group-default-password">
+          <label for="input-default-password">Fixed Password Value</label>
+          <input type="text" id="input-default-password" class="form-control" placeholder="Password123!">
+          <span class="help-text">Used for both "Password" and "Confirm Password" fields.</span>
+        </div>
+      </section>
+
+      <!-- Section: Visual & Engine Behavior -->
+      <section class="card">
+        <h3>Form Filling Behavior</h3>
+
+        <div class="toggle-group">
+          <div>
+            <span class="toggle-label">Highlight Filled Inputs</span>
+            <span class="help-text">Flashes a subtle green border on filled inputs for instant visual confirmation.</span>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggle-highlight">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle-group">
+          <div>
+            <span class="toggle-label">Fill Hidden Fields</span>
+            <span class="help-text">Fill invisible or hidden inputs (useful for testing complex multi-step wizards).</span>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggle-hidden">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </section>
+
+      <!-- Section: Shortcuts -->
+      <section id="shortcuts" class="card">
+        <h3>Keyboard Shortcuts & Cheatsheet</h3>
+        <table class="shortcuts-table">
+          <thead>
+            <tr>
+              <th>Action</th>
+              <th>Default Hotkey</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Fill Form</strong></td>
+              <td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd></td>
+              <td>Fills all visible inputs, selects, and checkboxes on the active tab</td>
+            </tr>
+            <tr>
+              <td><strong>Clear Form</strong></td>
+              <td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd></td>
+              <td>Clears all inputs and resets dropdowns</td>
+            </tr>
+            <tr>
+              <td><strong>Right-Click Menu</strong></td>
+              <td><kbd>Right Click</kbd></td>
+              <td>Inject specific dummy data (e.g. Bangladeshi phone, UUID, email) into the clicked field</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast">Settings saved successfully!</div>
+
+</body>
+</html>

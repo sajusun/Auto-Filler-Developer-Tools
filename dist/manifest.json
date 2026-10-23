@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "DevFill - Smart Dummy Form Filler",
+  "version": "1.0.0",
+  "description": "Lightning-fast dummy data filler for web developers & QA engineers. Framework-ready (React, Vue, Inertia) with keyboard shortcuts.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "contextMenus",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "fill_form": {
+      "suggested_key": {
+        "default": "Alt+Shift+F",
+        "mac": "Alt+Shift+F"
+      },
+      "description": "Fill all form fields on active page"
+    },
+    "clear_form": {
+      "suggested_key": {
+        "default": "Alt+Shift+C",
+        "mac": "Alt+Shift+C"
+      },
+      "description": "Clear all form fields on active page"
+    }
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  }
+}
