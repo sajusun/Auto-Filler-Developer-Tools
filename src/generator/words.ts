@@ -16,6 +16,15 @@ const LOREM_WORDS = [
   'ad', 'minim', 'veniam', 'quis', 'nostrud', 'exercitation', 'ullamco', 'laboris', 'nisi'
 ];
 
+const SHORT_TITLES = [
+  'Alpha Project', 'Beta Phase', 'Custom Item', 'Sample Entry', 'Digital Unit',
+  'Primary Task', 'Core Element', 'Standard Value', 'Draft Item', 'Active Record'
+];
+
+export function generateShortText(): string {
+  return getRandomElement(SHORT_TITLES);
+}
+
 export function generateCompany(): string {
   return getRandomElement(COMPANIES);
 }

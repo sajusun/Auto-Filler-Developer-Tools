@@ -4,13 +4,13 @@ import { generateEmail, generatePhone, generateAddress } from './contacts';
 import {
   generateCompany,
   generateJobTitle,
-  generateSentence,
   generateParagraph,
   generatePassword,
   generateBirthdate,
   generateFutureDate,
   generateUuid,
-  generateHexColor
+  generateHexColor,
+  generateShortText
 } from './words';
 
 export class DevFillGenerator {
@@ -90,13 +90,13 @@ export class DevFillGenerator {
       case 'price':
         return (Math.floor(Math.random() * 950) + 50).toString();
       case 'text':
-        return generateSentence();
+        return generateShortText();
       case 'long_text':
         return generateParagraph(2);
       case 'uuid':
         return generateUuid();
       default:
-        return generateSentence();
+        return generateShortText();
     }
   }
 }

@@ -9,49 +9,49 @@ const RULES: Rule[] = [
   // Confirm Password (must check before generic password)
   { category: 'confirm_password', pattern: /(confirm|retype|repeat|again).*pass|pass.*(confirm|match)/i },
   // Password
-  { category: 'password', pattern: /pass(word)?|pwd|pin|secret/i },
+  { category: 'password', pattern: /\b(pass(word)?|pwd|pin|secret)\b/i },
 
   // Email
-  { category: 'email', pattern: /e[-_]?mail/i },
+  { category: 'email', pattern: /\b(e[-_ ]?mail)\b/i },
 
   // Phone
-  { category: 'phone', pattern: /phone|mobile|cell|tel(ephone)?|contact[-_]?no|whatsapp/i },
+  { category: 'phone', pattern: /\b(phone|mobile|cell|tel(ephone)?|contact[-_ ]?no|whatsapp)\b/i },
 
-  // Names
-  { category: 'first_name', pattern: /^(first[-_]?name|fname|given[-_]?name)$/i },
-  { category: 'last_name', pattern: /^(last[-_]?name|lname|surname|family[-_]?name)$/i },
-  { category: 'full_name', pattern: /(full[-_]?name|your[-_]?name|display[-_]?name|^name$)/i },
-  { category: 'username', pattern: /user[-_]?name|login|nick(name)?|handle/i },
+  // Names (Crucial: match first and last before generic full_name or name)
+  { category: 'first_name', pattern: /\b(first[-_ ]?name|fname|given[-_ ]?name|forename)\b/i },
+  { category: 'last_name', pattern: /\b(last[-_ ]?name|lname|surname|family[-_ ]?name)\b/i },
+  { category: 'full_name', pattern: /\b(full[-_ ]?name|your[-_ ]?name|display[-_ ]?name|^name$|\bname\b)/i },
+  { category: 'username', pattern: /\b(user[-_ ]?name|login|nick(name)?|handle)\b/i },
 
   // Contact / Address
-  { category: 'zip', pattern: /zip|postal|pincode|postcode/i },
-  { category: 'city', pattern: /city|town|district/i },
-  { category: 'state', pattern: /state|province|region|division/i },
-  { category: 'country', pattern: /country|nation/i },
-  { category: 'address', pattern: /address|street|addr|location|residence/i },
+  { category: 'zip', pattern: /\b(zip|postal|pincode|postcode)\b/i },
+  { category: 'city', pattern: /\b(city|town|district)\b/i },
+  { category: 'state', pattern: /\b(state|province|region|division)\b/i },
+  { category: 'country', pattern: /\b(country|nation)\b/i },
+  { category: 'address', pattern: /\b(address|street|addr|location|residence)\b/i },
 
   // Business & Career
-  { category: 'company', pattern: /company|organization|org|business|employer|agency/i },
-  { category: 'job_title', pattern: /job|title|role|designation|profession|position/i },
+  { category: 'company', pattern: /\b(company|organization|org|business|employer|agency)\b/i },
+  { category: 'job_title', pattern: /\b(job|title|role|designation|profession|position)\b/i },
 
   // Dates
-  { category: 'birthdate', pattern: /birth|dob|born/i },
-  { category: 'date', pattern: /date|calendar|deadline|schedule|expiry|expires/i },
+  { category: 'birthdate', pattern: /\b(birth|dob|born)\b/i },
+  { category: 'date', pattern: /\b(date|calendar|deadline|schedule|expiry|expires)\b/i },
 
   // Financial / Card
-  { category: 'credit_card', pattern: /card[-_]?num|credit|debit|cc[-_]?num|pan/i },
-  { category: 'cvv', pattern: /cvv|cvc|security[-_]?code/i },
+  { category: 'credit_card', pattern: /\b(card[-_ ]?num|credit|debit|cc[-_ ]?num|pan)\b/i },
+  { category: 'cvv', pattern: /\b(cvv|cvc|security[-_ ]?code)\b/i },
 
   // Web & Tech
-  { category: 'url', pattern: /url|website|link|homepage|domain|portfolio|github|linkedin/i },
-  { category: 'uuid', pattern: /uuid|guid|api[-_]?key|token/i },
+  { category: 'url', pattern: /\b(url|website|link|homepage|domain|portfolio|github|linkedin)\b/i },
+  { category: 'uuid', pattern: /\b(uuid|guid|api[-_ ]?key|token)\b/i },
 
   // Numeric
-  { category: 'price', pattern: /price|salary|amount|cost|fee|budget/i },
-  { category: 'number', pattern: /age|qty|quantity|count|num|years/i },
+  { category: 'price', pattern: /\b(price|salary|amount|cost|fee|budget)\b/i },
+  { category: 'number', pattern: /\b(age|qty|quantity|count|num|years)\b/i },
 
   // Messages & Texts
-  { category: 'long_text', pattern: /bio|desc(ription)?|about|summary|comment|message|body|note|remark/i }
+  { category: 'long_text', pattern: /\b(bio|desc(ription)?|about|summary|comment|message|body|note|remark)\b/i }
 ];
 
 export function detectFieldCategory(element: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement): FieldCategory {
