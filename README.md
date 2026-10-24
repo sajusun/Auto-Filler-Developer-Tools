@@ -168,6 +168,13 @@ pnpm run build
 
 ---
 
+## 👨‍💻 Developer & Credits
+**DevFill** is crafted with ❤️ by **[Sakhawat Hossain](https://sajusun.github.io)**.
+- 🌐 **Portfolio & Website:** [https://sajusun.github.io](https://sajusun.github.io)
+- 🐙 **GitHub:** [@sajusun](https://github.com/sajusun)
+
+---
+
 ## 📄 License
 This project is open-source and available under the [MIT License](LICENSE).
-Built with ❤️ by [Sakhawat](https://github.com/sajusun).
+Built with ❤️ by [Sakhawat Hossain](https://sajusun.github.io).

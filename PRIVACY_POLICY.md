@@ -35,5 +35,6 @@ Because we do not collect any data, no user data is ever sold, leased, or shared
 
 ### 5. Contact & Open Source
 DevFill is open source and licensed under the MIT License. If you have any questions or feedback regarding this policy, please open an issue on our GitHub repository:
-- **Repository:** [https://github.com/sajusun/Auto-Filler---Developer-Tools](https://github.com/sajusun/Auto-Filler---Developer-Tools)
-- **Developer:** Sakhawat Hossain
+- **Repository:** [https://github.com/sajusun/Auto-Filler-Developer-Tools](https://github.com/sajusun/Auto-Filler-Developer-Tools)
+- **Developer:** [Sakhawat Hossain](https://sajusun.github.io)
+- **Portfolio Website:** [https://sajusun.github.io](https://sajusun.github.io)
