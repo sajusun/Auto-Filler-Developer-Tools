@@ -1,6 +1,6 @@
 {
   "name": "devfill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Smart, lightning-fast dummy data form filler for modern web developers & QA engineers",
   "type": "module",
   "scripts": {
