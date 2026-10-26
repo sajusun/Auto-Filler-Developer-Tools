@@ -330,6 +330,33 @@ input:checked + .toggle-slider:before {
   font-weight: 500;
 }
 
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-dot {
+  font-size: 10px;
+  color: var(--text-dim);
+  user-select: none;
+}
+
+.rate-link {
+  font-size: 10px;
+  color: #fbbf24;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.15s ease, color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.rate-link:hover {
+  color: #f59e0b;
+  text-decoration: underline;
+}
+
 .github-link {
   font-size: 10px;
   color: var(--accent-indigo);

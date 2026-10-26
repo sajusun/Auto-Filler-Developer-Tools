@@ -3,6 +3,7 @@
 # ⚡ DevFill
 ### Smart Dummy Form Filler for Web Developers & QA Engineers
 
+[![Edge Add-ons](https://img.shields.io/badge/Edge_Add--ons-Install_DevFill-0078D7?style=for-the-badge&logo=microsoftedge&logoColor=white)](https://microsoftedge.microsoft.com/addons/detail/nbemampnklgjngbilbpihongbbejhalp)
 [![Manifest V3](https://img.shields.io/badge/Chrome_Extension-Manifest_V3-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://developer.chrome.com/docs/extensions/mv3/intro/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.4-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -56,7 +57,12 @@ Most form-filling extensions break modern web applications built with **React, V
 
 ## 🚀 Installation & Loading in Browser
 
-You can install DevFill into any Chromium-based browser (**Google Chrome, Microsoft Edge, Brave, Opera, Arc**) in 30 seconds:
+### Option 1: Official Store Install (Easiest)
+Install directly from the official store for Microsoft Edge, Brave, Chrome, and any Chromium browser:
+👉 **[Get DevFill on Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/nbemampnklgjngbilbpihongbbejhalp)**
+
+### Option 2: Load Unpacked from Source (Developer Mode)
+You can build and run locally in 30 seconds:
 
 1. Clone or download this repository:
    ```bash
